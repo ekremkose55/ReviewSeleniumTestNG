@@ -1,12 +1,15 @@
 package com.techproed.tests;
 
+import com.techproed.utilities.TestBase;
 import org.testng.annotations.Test;
 
-public class DependsOnMethodsTest {
+public class DependsOnMethodsTest extends TestBase {
+
 
     @Test (priority = 1)
     public void test1(){
         System.out.println("Test01");
+
     }
 
     @Test (priority = 2, dependsOnMethods = "test1")
